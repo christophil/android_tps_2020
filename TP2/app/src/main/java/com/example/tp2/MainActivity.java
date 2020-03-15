@@ -52,11 +52,23 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("calculAndResult", calculAndResult);
                 this.startActivity(intent);
                 break;
+            case R.id.menu2:
+                Intent intent2 = new Intent(this, MainActivity.class);
+                this.startActivity(intent2);
+                break;
+            case R.id.menu3:
+                Intent intent3 = new Intent(this, EditActivity.class);
+                this.startActivity(intent3);
+                break;
             default:
                 return super.onOptionsItemSelected(item);
         }
 
         return true;
+    }
+
+    @Override
+    public void onBackPressed() {
     }
 
     public void clickHandler(View view){
